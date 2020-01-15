@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- 구글폰트 -->
+	<link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+	<style type="text/css">
+		* {
+			font-family: 'Stylish', sans-serif;
+		}
+		.wrap {
+			width: 900px;
+			margin: auto;
+		}
+		.comment {
+			color: blue;
+			font-weight: bold;
+		}
+		.form-post {
+			display: none;
+			max-width: 500px;
+			padding: 2rem;
+			margin: 2rem auto;
+			border-color: #e9ecef;
+			border-radius: 0.3rem;
+			border: solid;
+		}
+		.close-btn{
+			display: none;
+			height: 48px;
+		}
+		.close-btn.on{
+			display: inline-block;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.toggle-btn').click(function(){
+				$('.open-btn').toggle();
+				$('.close-btn').toggleClass('on');
+				$('#post-box').toggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="jumbotron">
+			<h1 class="display-4">나홀로 링크 메모장!</h1>
+			<p class="lead">중요한 링크를 저장해두고, 나중에 볼 수 있는 공간입니다</p>
+			<hr class="my-4">
+			<p class="lead">
+				<a class="toggle-btn open-btn btn btn-primary btn-lg" href="#" role="button">포스팅박스 열기</a>
+				<a class="toggle-btn close-btn btn btn-primary btn-lg" href="#" role="button">포스팅박스 닫기</a>
+			</p>
+		</div>
+		<div class="form-post" id="post-box">
+			<div>
+				<div class="form-group">
+					<label for="exampleFormControlInput1">아티클 URL</label>
+					<input class="form-control" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">간단 코멘트</label>
+					<textarea class="form-control" rows="2"></textarea>
+				</div>
+				<button type="button" class="btn btn-primary">기사저장</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

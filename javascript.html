@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript</title>
+	<script type="text/javascript">
+		function combined(num1,num2){
+			alert(num1+'과'+num2+'를 더해보겠습니다');
+			console.log(num1,num2,num1+num2);
+			return num1+num2;
+		}
+
+		function compare_ninety(num){
+			if (num > 90) {
+				alert('90보다 커요!')
+			} else {
+				alert('90보다 작아요!')
+			}
+		}
+
+		function hey(){
+			alert('세미야 안녕!')
+			let y = combined(1,2);
+			console.log('y의 값은' + y);
+			compare_ninety(30);
+		}
+	</script>
+</head>
+<body>
+	<button onclick="hey()" type="button" class="btn btn-primary">기사저장</button>
+</body>
+</html>
